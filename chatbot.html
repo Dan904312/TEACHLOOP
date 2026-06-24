@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeachLoop AI</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #191919;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .hamburger {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #e0e0e0;
+      background: #2a2a2a;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+    }
+    .hamburger:hover { background: #333; }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-top: 80px;
+      margin-bottom: 24px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='100' fill='%23222'/%3E%3Ccircle cx='100' cy='75' r='45' fill='%23ddd'/%3E%3Ccircle cx='100' cy='75' r='40' fill='%23eee'/%3E%3Ccircle cx='85' cy='68' r='5' fill='%23333'/%3E%3Ccircle cx='115' cy='68' r='5' fill='%23333'/%3E%3Cpath d='M88 88 Q100 100 112 88' stroke='%23333' stroke-width='3' fill='none'/%3E%3Cpath d='M65 80 Q80 75 95 85' stroke='%23333' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M135 80 Q120 75 105 85' stroke='%23333' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='100' cy='140' r='35' fill='%23222'/%3E%3Ccircle cx='100' cy='140' r='30' fill='%23eee'/%3E%3C/svg%3E");
+      background-size: cover;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 32px;
+      color: #ffffff;
+    }
+    .input-box {
+      width: 100%;
+      max-width: 600px;
+      background: #2a2a2a;
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 40px;
+    }
+    .apps-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+    }
+    .app-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      font-size: 16px;
+    }
+    .app-icon:hover { background: #444; }
+    textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: #e0e0e0;
+      font-size: 16px;
+      resize: none;
+      outline: none;
+      font-family: 'Inter', sans-serif;
+      min-height: 60px;
+    }
+    textarea::placeholder { color: #888; }
+    .bottom-section {
+      width: 100%;
+      max-width: 600px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .section-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #888;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .card {
+      background: #2a2a2a;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .card:hover { background: #333; }
+    .card-title { font-size: 14px; font-weight: 500; color: #e0e0e0; }
+    .card-desc { font-size: 12px; color: #888; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="hamburger">☰</div>
+  <div class="avatar"></div>
+  <h1>How may I be of service?</h1>
+  <div class="input-box">
+    <div class="apps-bar">
+      <div class="app-icon">📝</div>
+      <div class="app-icon">🔍</div>
+      <div class="app-icon">💡</div>
+      <div class="app-icon">📊</div>
+      <div class="app-icon">🎯</div>
+    </div>
+    <textarea placeholder="Do anything with AI..." rows="3"></textarea>
+  </div>
+  <div class="bottom-section">
+    <div class="recent-chats">
+      <div class="section-title">Recent Chats</div>
+      <div class="card">
+        <div class="card-title">Lesson Plan Help</div>
+        <div class="card-desc">Created 2 hours ago</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Quiz Generation</div>
+        <div class="card-desc">Created yesterday</div>
+      </div>
+    </div>
+    <div class="suggested">
+      <div class="section-title">Suggested</div>
+      <div class="card">
+        <div class="card-title">Study Guide</div>
+        <div class="card-desc">Summarize key concepts</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Flashcards</div>
+        <div class="card-desc">Create study cards</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
